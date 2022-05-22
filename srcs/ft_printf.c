@@ -6,7 +6,7 @@
 /*   By: phongpai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 14:41:44 by phongpai          #+#    #+#             */
-/*   Updated: 2022/05/19 21:33:00 by phongpai         ###   ########.fr       */
+/*   Updated: 2022/05/22 16:22:07 by phongpai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,12 @@ int	ft_printf(const char *s, ...)
 	return (count);
 }
 
-#include <stdio.h>
-int		main()
-{
-	int i;
-	ft_printf("c = %c\ns = %s\n",'C',"Hello");
-	ft_printf("d = %d\ni = %i\nu = %u\n",2185456,456789,4555555);
-	i = ft_printf("p = %p\nx = %x\nX = %X\nper = %%\n",&i,456789,456789);
-	printf("i = %d\n", i);
-}
+// #include <stdio.h>
+// int		main()
+// {
+// 	int i;
+// 	ft_printf("c = %c\ns = %s\n",'C',"Hello");
+// 	ft_printf("d = %d\ni = %i\nu = %u\n",2185456,456789,4555555);
+// 	i = ft_printf("p = %p\nx = %x\nX = %X\nper = %%\n",&i,456789,456789);
+// 	printf("i = %d\n", i);
+// }

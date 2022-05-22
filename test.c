@@ -47,5 +47,5 @@ int		main()
 	char	*s;
 
 	//printf("%s\n%s\n%s\n",ft_unitoa(i), ft_unitoa(j), ft_unitoa(k));
-	printf("%%\n");
+	ft_printf("%%\n");
 }
