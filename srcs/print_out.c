@@ -6,7 +6,7 @@
 /*   By: phongpai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 20:07:24 by phongpai          #+#    #+#             */
-/*   Updated: 2022/05/19 21:30:49 by phongpai         ###   ########.fr       */
+/*   Updated: 2022/05/23 10:15:31 by phongpai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,11 @@ int	print_out(char *str, int i, char *list_mode, va_list input)
 		list_mode++;
 	}
 	split = fix_firstchar(str, list_mode);
+	//printf("split = %s\n",split[0]);
 	fix = fix_split(input, split, list_mode);
+	//printf("fix = %s\n",fix[0]);
 	out = ft_strjoin_free(tmp, fix[i]);
+	//printf("out = %s\n",out);
 	while (fix[i + 1] != NULL)
 	{
 		out = ft_strjoin_free(out, fix[i + 1]);

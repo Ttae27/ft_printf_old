@@ -6,7 +6,7 @@
 /*   By: phongpai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 14:41:44 by phongpai          #+#    #+#             */
-/*   Updated: 2022/05/22 16:22:07 by phongpai         ###   ########.fr       */
+/*   Updated: 2022/05/23 10:16:01 by phongpai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,17 @@ int	ft_printf(const char *s, ...)
 	char	*list_mode;
 	char	*str;
 	int		trig;
+	int		o;
 
+	o = 0;
 	str = (char *)s;
 	trig = 0;
-	if (str[0] == '%')
+	if (str[0] == '%' && str[2] != '\0')
 		trig = 1;
 	list_mode = mode_check(str, count_percent(str));
 	va_start(input, s);
+	// if (str[0] == '%' && str[1] == 'c' && str[2] == '\0')	
+	// 	o = 1;
 	count = print_out(str, 0, list_mode, input);
 	va_end(input);
 	if (trig == 1)
@@ -84,12 +88,13 @@ int	ft_printf(const char *s, ...)
 	return (count);
 }
 
-// #include <stdio.h>
-// int		main()
-// {
-// 	int i;
-// 	ft_printf("c = %c\ns = %s\n",'C',"Hello");
-// 	ft_printf("d = %d\ni = %i\nu = %u\n",2185456,456789,4555555);
-// 	i = ft_printf("p = %p\nx = %x\nX = %X\nper = %%\n",&i,456789,456789);
-// 	printf("i = %d\n", i);
-// }
+#include <stdio.h>
+int		main()
+{
+	int i;
+	// ft_printf("c = %c\ns = %s\n",'C',"Hello");
+	// ft_printf("d = %d\ni = %i\nu = %u\n",2185456,456789,4555555);
+	// i = ft_printf("p = %p\nx = %x\nX = %X\nper = %%\n",&i,456789,456789);
+	// printf("i = %d\n", i);
+	ft_printf(" %c %c %c ", '2', '1', 0);
+}
