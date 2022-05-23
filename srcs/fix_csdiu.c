@@ -6,7 +6,7 @@
 /*   By: phongpai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 21:20:24 by phongpai          #+#    #+#             */
-/*   Updated: 2022/05/23 10:15:27 by phongpai         ###   ########.fr       */
+/*   Updated: 2022/05/23 12:37:23 by phongpai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*fix_c(char *split, va_list input, int len)
 	arg_c[len] = tmp;
 	arg_c[len + 1] = '\0';
 	free(split);
-	//printf("arg_c = %s\n", arg_c);
+//	printf("arg_c = %s\n", arg_c);
 	return (arg_c);
 }
 
